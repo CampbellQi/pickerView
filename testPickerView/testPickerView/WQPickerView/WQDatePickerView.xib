@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WQDatePickerView">
+            <connections>
+                <outlet property="pickerView" destination="U9o-Qc-PJN" id="pNh-Va-27I"/>
+                <outlet property="view" destination="iN0-l3-epB" id="rBC-jd-DLa"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xe9-eU-r3C">
+                    <rect key="frame" x="0.0" y="398" width="375" height="269"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="U9o-Qc-PJN">
+                            <rect key="frame" x="0.0" y="47" width="375" height="222"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <date key="date" timeIntervalSinceReferenceDate="458461181.74955702">
+                                <!--2015-07-13 06:19:41 +0000-->
+                            </date>
+                            <date key="minimumDate" timeIntervalSinceReferenceDate="-1609419600">
+                                <!--1950-01-01 11:00:00 +0000-->
+                            </date>
+                            <locale key="locale" localeIdentifier="zh"/>
+                        </datePicker>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="datepicker_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="s6c-8P-8J2">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="ZAr-qe-weG"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVj-f4-kdv">
+                            <rect key="frame" x="0.0" y="3" width="54" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="54" id="DoZ-tN-JBv"/>
+                                <constraint firstAttribute="height" constant="37" id="ODY-gt-oKn"/>
+                            </constraints>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.3921568627" green="0.3921568627" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelClicked:" destination="-1" eventType="touchUpInside" id="g0u-Mx-ivf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZZ-ZD-zDy">
+                            <rect key="frame" x="321" y="3" width="54" height="37"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="37" id="dhd-fp-Qhq"/>
+                                <constraint firstAttribute="width" constant="54" id="hZ1-e3-OOI"/>
+                            </constraints>
+                            <state key="normal" title="确定">
+                                <color key="titleColor" red="0.0" green="0.62352941179999999" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="completeClicked:" destination="-1" eventType="touchUpInside" id="9yq-BW-7AK"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="U9o-Qc-PJN" firstAttribute="leading" secondItem="xe9-eU-r3C" secondAttribute="leading" id="69J-UX-dYA"/>
+                        <constraint firstAttribute="bottom" secondItem="U9o-Qc-PJN" secondAttribute="bottom" id="8Bp-cH-kjO"/>
+                        <constraint firstItem="BVj-f4-kdv" firstAttribute="centerY" secondItem="s6c-8P-8J2" secondAttribute="centerY" id="8qa-h2-Smh"/>
+                        <constraint firstItem="U9o-Qc-PJN" firstAttribute="top" secondItem="s6c-8P-8J2" secondAttribute="bottom" constant="3" id="V6e-bm-eDN"/>
+                        <constraint firstAttribute="trailing" secondItem="U9o-Qc-PJN" secondAttribute="trailing" id="XQk-Xl-6cL"/>
+                        <constraint firstItem="s6c-8P-8J2" firstAttribute="top" secondItem="xe9-eU-r3C" secondAttribute="top" id="Xo1-dr-E8Y"/>
+                        <constraint firstItem="AZZ-ZD-zDy" firstAttribute="centerY" secondItem="s6c-8P-8J2" secondAttribute="centerY" id="azE-EU-Lt4"/>
+                        <constraint firstItem="s6c-8P-8J2" firstAttribute="leading" secondItem="xe9-eU-r3C" secondAttribute="leading" id="fBW-ZE-anb"/>
+                        <constraint firstItem="BVj-f4-kdv" firstAttribute="leading" secondItem="s6c-8P-8J2" secondAttribute="leading" id="naV-Jd-68L"/>
+                        <constraint firstItem="AZZ-ZD-zDy" firstAttribute="trailing" secondItem="s6c-8P-8J2" secondAttribute="trailing" id="osj-5a-IIT"/>
+                        <constraint firstAttribute="height" constant="269" id="vGy-vv-vgt"/>
+                        <constraint firstAttribute="trailing" secondItem="s6c-8P-8J2" secondAttribute="trailing" id="w8F-kX-wJe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.7031785102739726" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="xe9-eU-r3C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ial-zW-LSK"/>
+                <constraint firstAttribute="bottom" secondItem="xe9-eU-r3C" secondAttribute="bottom" id="Iao-ZL-KbR"/>
+                <constraint firstAttribute="trailing" secondItem="xe9-eU-r3C" secondAttribute="trailing" id="tXf-G3-NNT"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="Xp5-hq-FDv" appends="YES" id="16B-eu-fzD"/>
+            </connections>
+            <point key="canvasLocation" x="-58" y="18"/>
+        </view>
+        <tapGestureRecognizer id="Xp5-hq-FDv">
+            <connections>
+                <action selector="dispearSelector:" destination="-1" id="u04-tu-Ogl"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="datepicker_bg.png" width="320" height="37"/>
+    </resources>
+</document>
